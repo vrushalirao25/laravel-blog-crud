@@ -66,7 +66,7 @@ php artisan key:generate
    DB_PORT=3306
    DB_DATABASE=blog
    DB_USERNAME=root
-   DB_PASSWORD=your_password_here
+   DB_PASSWORD=m#P52s@ap$V
    ```
 
 ### 5. Run Migrations
