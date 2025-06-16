@@ -15,4 +15,9 @@ class PostService
             'user_id' => $userId,
         ]);
     }
+
+    public function getAll($perPage=10)
+    {
+        return Post::orderBy('created_at','desc')->paginate($perPage);
+    }
 }

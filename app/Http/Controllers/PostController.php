@@ -25,5 +25,13 @@ class PostController extends Controller
         return redirect()->route('posts')->with('success', 'Profile created successfully.');
     }
 
-    public function index() {}
+    public function index() 
+    {
+        $postService = new PostService();
+        $posts = $postService->getAll();
+        return view('posts/listing',['posts' => $posts]);
+        //return view('posts.listing',compact('posts'));
+        //'posts.index' uses dot notation
+        //'posts/listing' uses slash notation
+    }
 }
